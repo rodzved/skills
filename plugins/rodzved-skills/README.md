@@ -1,4 +1,8 @@
-# delegate
+# rodzved-skills
+
+General-purpose skills, installed together as one plugin.
+
+## delegate
 
 A session mode for Claude Code that keeps the main session's context small. Once it is on, the
 main session answers, decides and reviews, while subagents do the searching, planning and
@@ -8,20 +12,21 @@ have to clear it.
 Use it for sessions with a lot of exploration or multi-step changes. A question Claude can answer
 without tools, or a small edit at a known place, still happens in the main session.
 
-## Use
+### Use
 
 | Installed as | Turn it on |
 |---|---|
-| Plugin | `/delegate:delegate` |
+| Plugin | `/rodzved-skills:delegate` |
 | Copied skill folder | `/delegate` |
 
 Add a request after the command to start on it right away. Say "stop delegating" to end the mode.
 After `/clear` or compaction, run the command again to restore it. The skill itself names
-`/delegate`; with the plugin install, use `/delegate:delegate` if the bare name does not resolve.
+`/delegate`; with the plugin install, use `/rodzved-skills:delegate` if the bare name does not
+resolve.
 
 See the [root README](../../README.md#install) for both installs.
 
-## Requirements
+### Requirements
 
 The skill expects access to the **Fable** and **Opus** models: it dispatches agents on `fable` and
 `opus` (agent types `Explore` and `general-purpose`) and suggests `/model fable` for the main
@@ -43,8 +48,8 @@ The suite lives in [`evals/`](evals/), one folder per case.
 Run from the repository root:
 
 ```bash
-bash plugins/delegate/eval.sh                                  # the whole suite
-bash plugins/delegate/eval.sh --case 'no-tool-question' --runs 1  # one case, one run
+bash plugins/rodzved-skills/eval.sh                                  # the whole suite
+bash plugins/rodzved-skills/eval.sh --case 'no-tool-question' --runs 1  # one case, one run
 ```
 
 - **Cost:** a full run is about $6 by the eval's estimate at API list prices. On a Claude
@@ -53,4 +58,4 @@ bash plugins/delegate/eval.sh --case 'no-tool-question' --runs 1  # one case, on
 - **Requirements:** Claude Code 2.1.269 or later, git 2.31 or later, [`uv`](https://docs.astral.sh/uv/)
   (one fixture's tests run through it), `bubblewrap` and `socat` on Linux. On Windows, run it in
   WSL2: native Windows has no sandbox backend.
-- **Report:** `plugins/delegate/evals/results/<timestamp>/report.html`, ignored by git.
+- **Report:** `plugins/rodzved-skills/evals/results/<timestamp>/report.html`, ignored by git.

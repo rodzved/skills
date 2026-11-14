@@ -1,8 +1,8 @@
 # skills
 
-Public repo of Claude Code skills, one plugin per skill. The root is the plugin marketplace
-`rodzved-skills`; each skill lives in `plugins/<name>/` with its manifest, `README.md`,
-`skills/<name>/SKILL.md`, and an optional paid eval suite (`evals/` + `eval.sh`).
+Public repo of Claude Code skills, grouped into plugins. The root is the plugin marketplace
+`rodzved`; each plugin lives in `plugins/<plugin>/` with its manifest, `README.md`, one
+`skills/<skill>/SKILL.md` per skill, and an optional paid eval suite (`evals/` + `eval.sh`).
 
 ## Shipping
 
@@ -17,9 +17,9 @@ not a pass.
 
 ## Evals
 
-- `plugins/<name>/eval.sh` is paid: run it only when the user asks, one case first
-  (`--case '<name>' --runs 1`). Commands, cost and requirements:
-  [plugins/delegate/README.md#evals](plugins/delegate/README.md#evals).
+- `plugins/<plugin>/eval.sh` is paid: run it only when the user asks, one case first
+  (`--case '<case>' --runs 1`). Commands, cost and requirements:
+  [plugins/rodzved-skills/README.md#evals](plugins/rodzved-skills/README.md#evals).
 - Results land in `evals/results/` and stay local (gitignored): transcripts carry local paths and
   session ids.
 - A case is a folder; `tests/eval-cases.sh` enforces its shape:
@@ -36,12 +36,16 @@ not a pass.
 
 ## Adding a skill
 
-1. Create `plugins/<name>/` as above.
-2. Add its entry to `.claude-plugin/marketplace.json` with `"source": "./plugins/<name>"`.
+A skill joins the plugin of its group (`rodzved-skills` for general-purpose skills).
+
+1. Create `plugins/<plugin>/skills/<skill>/SKILL.md` and its section in that plugin's `README.md`.
+2. Name it in the plugin's `description`, in `plugin.json` and in its marketplace entry.
 3. Add its row to the skills table in `README.md`.
 
-The folder, the marketplace entry and `name` in `plugin.json` are one string. Done when
-`bash tests/run.sh` is green.
+A new group is a new plugin: create `plugins/<plugin>/` as above and add its entry to
+`.claude-plugin/marketplace.json` with `"source": "./plugins/<plugin>"`. The folder, the
+marketplace entry and `name` in `plugin.json` are one string. Done when `bash tests/run.sh` is
+green.
 
 ## Conventions
 

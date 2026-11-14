@@ -4,4 +4,4 @@ max_turns: 6
 allowed_tools: [Agent, Read, Grep, Glob, AskUserQuestion]
 ---
 
-/delegate:delegate What is the difference between git fetch and git pull? Answer in two sentences.
+/rodzved-skills:delegate What is the difference between git fetch and git pull? Answer in two sentences.

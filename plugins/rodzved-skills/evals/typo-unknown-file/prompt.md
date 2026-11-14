@@ -4,4 +4,4 @@ max_turns: 10
 allowed_tools: [Agent, Read, Grep, Glob, AskUserQuestion]
 ---
 
-/delegate:delegate Somewhere in this repo "recieve" is misspelled. Fix it to "receive".
+/rodzved-skills:delegate Somewhere in this repo "recieve" is misspelled. Fix it to "receive".
