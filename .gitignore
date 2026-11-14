@@ -1,0 +1,2 @@
+# Written by each eval run; transcripts hold local paths and session ids.
+plugins/*/evals/results/

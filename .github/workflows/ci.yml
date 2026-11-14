@@ -1,0 +1,44 @@
+# Only the free checks run here, the same ones tests/run.sh runs locally: one
+# step each so a red run names the failing test, and every step runs even when
+# an earlier one failed. The eval suites make paid model calls and are run by a
+# maintainer, never in CI; no secrets are set.
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      REQUIRE_TOOLS: "1" # a missing tool fails instead of skipping
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install shellcheck
+        run: sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends shellcheck
+
+      # The runner ships Node; validate needs no credentials.
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: shellcheck
+        if: ${{ !cancelled() }}
+        run: bash tests/lint-shell.sh
+
+      - name: Line endings (LF everywhere)
+        if: ${{ !cancelled() }}
+        run: bash tests/line-endings.sh
+
+      - name: Marketplace and plugin manifests validate
+        if: ${{ !cancelled() }}
+        run: bash tests/validate.sh
+
+      - name: Eval cases well-formed
+        if: ${{ !cancelled() }}
+        run: bash tests/eval-cases.sh

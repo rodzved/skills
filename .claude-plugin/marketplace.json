@@ -1,0 +1,12 @@
+{
+  "name": "rodzved-skills",
+  "description": "Claude Code skills, one plugin per skill.",
+  "owner": { "name": "rodzved" },
+  "plugins": [
+    {
+      "name": "delegate",
+      "source": "./plugins/delegate",
+      "description": "Session mode that keeps the main session's context small by sending search, planning and execution to subagents."
+    }
+  ]
+}

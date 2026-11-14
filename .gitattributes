@@ -1,0 +1,2 @@
+# LF everywhere: bash (eval.sh, fixtures, tests) breaks on CRLF.
+* text=auto eol=lf
