@@ -40,7 +40,9 @@ it reopen what you already decided. The skill sorts your text into four parts: t
 outcome that shows it is solved, what is settled, and what is open for the agent to propose.
 
 It asks at most three questions, only ones you alone can answer (the why, the done-state, a
-preference), and leaves facts in the code to the agent. A gap you leave becomes an open point in
+preference), and leaves facts in the code to the agent. The one exception: when you ask it to
+expand your wording and point at something in your project, it takes a brief read-only look at
+that thing to name what is there, or asks you when it cannot find it. A gap you leave becomes an open point in
 the prompt rather than a guess. It never starts the task itself. A request that is already clear
 comes back unchanged.
 
@@ -68,6 +70,7 @@ The suite lives in [`evals/`](evals/), one folder per case.
 |---|---|
 | `hidden-design-choice` | A design choice found during planning comes back from a Fable planner as a question. |
 | `mold-bare-request` | A bare "do X" with no why gets at most three questions, not the work itself. |
+| `mold-expand-project` | An expand request that points at a project folder gets a brief read-only look, and a name found there reaches the prompt. |
 | `mold-quoted-skill` | A quoted idea that opens with `/rodzved-skills:delegate` is rewritten, not run; the note after the quotes has its instruction left out of the prompt and its fact carried in. |
 | `mold-rambling-request` | A rambling request that holds all four parts comes back rewritten as one fenced prompt, details kept and none added. |
 | `mold-trivial-request` | A trivial rename comes back unchanged in a fenced block with a one-line note. |
