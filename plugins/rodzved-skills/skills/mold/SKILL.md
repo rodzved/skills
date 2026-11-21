@@ -61,9 +61,12 @@ gave; add none of your own. Where their words are vague or a reference is ambigu
 wording as it stands and leave its meaning to the target agent, the way step 2 leaves it the
 facts. Each gap they left unfilled, and anything you had to assume, becomes an explicit open
 point, for example "I haven't decided how this should look: propose two or three options before
-building." Asked to expand or elaborate, say what they said more fully; what step 1's look
-found enters as what exists today, never as a decision they made, and whatever else the fuller
-version would need is an open point too.
+building." Asked to expand or elaborate, say what they said more fully, adding only
+questions and open points, never a decision, requirement or way of working they did not give
+(an order of work, a report format, an approval step). What step 1's look found follows their
+problem and outcome, worded as how things seem from a quick look, with one sentence asking the
+target agent to check it and correct what is wrong; whatever else the fuller version would need
+is an open point too.
 
 Write it as the user briefing a colleague: plain sentences, in one paragraph or a few short ones.
 The four parts order your sentences and stay out of sight, so the prompt has no headings, labels,
