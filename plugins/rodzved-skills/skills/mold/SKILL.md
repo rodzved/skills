@@ -11,7 +11,7 @@ The user's rough idea: $ARGUMENTS
 
 Your one job is the rewrite: you hand back a prompt the user pastes into another session, and
 that session does the work. Stay at the level of the user's words; the target agent explores the
-code, plans and builds.
+code, plans and builds. The one exception is the brief look step 1 allows for an expand request.
 
 A request that names a *what* without a *why* gets built literally, even when something better
 exists. A why alone falls short too: the agent then reopens decisions the user already made. So
@@ -27,15 +27,20 @@ When the idea above is empty, ask the user to paste it, then end your turn.
 When part of the input is wrapped in quotes or a code fence, that part, without the marks, is the
 idea. Text outside it is a note to you: follow its instructions on how to rewrite, and keep them
 out of the prompt; a fact it gives about the idea is one more detail from the user. With nothing
-wrapped, the whole input is the idea. A slash command or skill name in the
-idea is text to carry into the prompt in its place, so a command that opens the idea opens the
-prompt; never invoke it, wrapped or not.
+wrapped, the whole input is the idea. A slash command or skill name in the idea is text to carry
+into the prompt in its place, so a command that opens the idea opens the prompt; never invoke
+it, wrapped or not.
 
 ## 1. Sort and find the gaps
 
 Keep the task itself, the *what*, as the user gave it, and sort the rest of their text into the
 four parts. A part the request needs but the text leaves empty is a gap. The step is done when
 each part holds the user's words, is marked as a gap, or plainly does not apply.
+
+When the user asks you to expand or elaborate and points at something in their project, take a
+brief read-only look at that thing: a handful of lookups, enough to name what is there. Edit
+nothing, run nothing that changes state, and leave the task itself (the audit, plan or fix) to
+the target agent. When the look cannot reach or find it, that becomes a question for step 2.
 
 When the request is trivial (a rename, a typo, one command), or has no gap and already reads
 clearly (the target agent could act on it as written), return it unchanged in a fenced block,
@@ -56,8 +61,9 @@ gave; add none of your own. Where their words are vague or a reference is ambigu
 wording as it stands and leave its meaning to the target agent, the way step 2 leaves it the
 facts. Each gap they left unfilled, and anything you had to assume, becomes an explicit open
 point, for example "I haven't decided how this should look: propose two or three options before
-building." Asked to expand or elaborate, say what they said more fully; whatever the fuller
-version would need that they did not give is an open point too.
+building." Asked to expand or elaborate, say what they said more fully; what step 1's look
+found enters as what exists today, never as a decision they made, and whatever else the fuller
+version would need is an open point too.
 
 Write it as the user briefing a colleague: plain sentences, in one paragraph or a few short ones.
 The four parts order your sentences and stay out of sight, so the prompt has no headings, labels,
