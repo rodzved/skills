@@ -51,8 +51,11 @@ facts. Each gap they left unfilled, and anything you had to assume, becomes an e
 point, for example "I haven't decided how this should look: propose two or three options before
 building."
 
-Open with the task, then the four parts, in prose or short labelled lines, whichever reads closer
-to how the user writes. Leave out a part that does not apply.
+Write it as the user briefing a colleague: plain sentences, in one paragraph or a few short ones.
+The four parts order your sentences and stay out of sight, so the prompt has no headings, labels,
+lists or bold. Lead with the situation and the problem, then what the user wants and how they
+will know it is done, then what is settled, and end with what is still open. Leave out a part that
+does not apply. Let the length follow their details, each said once.
 
 ## 4. Hand it back
 

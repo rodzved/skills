@@ -54,7 +54,8 @@ Run it in a separate session from the one that will do the work.
 | Copied skill folder | `/mold <rough idea>` |
 
 Without an idea, it asks you to paste one. The answer is the prompt alone, in one fenced block,
-in your own voice. Anything it had to assume is written into the prompt as an open point.
+in your own voice: plain sentences that lead with the problem and end with what is open, with no
+headings or lists. Anything it had to assume is written into the prompt as an open point.
 
 ## Evals
 
