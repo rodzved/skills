@@ -46,9 +46,10 @@ short; then end your turn. With nothing to ask, go straight to step 3.
 
 Write in the user's voice: first person, their terms, their register. Keep every detail they
 gave; add none of your own. Where their words are vague or a reference is ambiguous, keep their
-wording rather than naming what they probably meant. Each gap they left unfilled, and anything
-you had to assume, becomes an explicit open point, for example "I haven't decided how this should
-look: propose two or three options before building."
+wording as it stands and leave its meaning to the target agent, the way step 2 leaves it the
+facts. Each gap they left unfilled, and anything you had to assume, becomes an explicit open
+point, for example "I haven't decided how this should look: propose two or three options before
+building."
 
 Open with the task, then the four parts, in prose or short labelled lines, whichever reads closer
 to how the user writes. Leave out a part that does not apply.
