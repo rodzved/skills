@@ -63,6 +63,9 @@ The suite lives in [`evals/`](evals/), one folder per case.
 | Case | What it checks |
 |---|---|
 | `hidden-design-choice` | A design choice found during planning comes back from a Fable planner as a question. |
+| `mold-bare-request` | A bare "do X" with no why gets at most three questions, not the work itself. |
+| `mold-complete-request` | A complete request comes back as one fenced prompt, the user's details kept and none added. |
+| `mold-trivial-request` | A trivial rename comes back unchanged in a fenced block with a one-line note. |
 | `no-tool-question` | A question answerable without tools stays in the main session. |
 | `open-design-choice` | A design choice the user declares open comes back as scoped, well-formed questions. |
 | `trace-unknown-path` | Exploration with no known target goes to an agent on Opus. |
