@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Evaluates the delegate skill with real model runs: about $6 for the whole suite, an
-# estimate at API list prices. A Claude subscription counts it against the plan's usage
-# limits; an API key is billed. --max-cost-usd caps the estimate, not plan usage.
+# Evaluates the delegate and mold skills with real model runs: about $6 for the delegate
+# cases, an estimate at API list prices; the mold cases are not costed yet. A Claude
+# subscription counts it against the plan's usage limits; an API key is billed.
+# --max-cost-usd caps the estimate, not plan usage.
 # Usage: eval.sh [claude plugin eval options], e.g. eval.sh --case 'no-tool*' --runs 1
 set -euo pipefail
 command -v claude >/dev/null || { echo "eval.sh: claude CLI not found" >&2; exit 1; }

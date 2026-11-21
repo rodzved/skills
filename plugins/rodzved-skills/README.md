@@ -64,7 +64,7 @@ The suite lives in [`evals/`](evals/), one folder per case.
 |---|---|
 | `hidden-design-choice` | A design choice found during planning comes back from a Fable planner as a question. |
 | `mold-bare-request` | A bare "do X" with no why gets at most three questions, not the work itself. |
-| `mold-complete-request` | A complete request comes back as one fenced prompt, the user's details kept and none added. |
+| `mold-rambling-request` | A rambling request that holds all four parts comes back rewritten as one fenced prompt, details kept and none added. |
 | `mold-trivial-request` | A trivial rename comes back unchanged in a fenced block with a one-line note. |
 | `no-tool-question` | A question answerable without tools stays in the main session. |
 | `open-design-choice` | A design choice the user declares open comes back as scoped, well-formed questions. |
@@ -79,9 +79,9 @@ bash plugins/rodzved-skills/eval.sh                                  # the whole
 bash plugins/rodzved-skills/eval.sh --case 'no-tool-question' --runs 1  # one case, one run
 ```
 
-- **Cost:** a full run is about $6 by the eval's estimate at API list prices. On a Claude
-  subscription it counts against your plan's usage limits and is not charged in dollars; with an
-  API key it is billed. The script's `--max-cost-usd 10` caps that estimate, not plan usage.
+- **Cost:** the delegate cases are about $6 a run by the eval's estimate at API list prices; the
+  mold cases are not costed yet. On a Claude subscription a run counts against your plan's usage
+  limits and is not charged in dollars; with an API key it is billed. The script's `--max-cost-usd 10` caps that estimate, not plan usage.
 - **Requirements:** Claude Code 2.1.269 or later, git 2.31 or later, [`uv`](https://docs.astral.sh/uv/)
   (one fixture's tests run through it), `bubblewrap` and `socat` on Linux. On Windows, run it in
   WSL2: native Windows has no sandbox backend.
