@@ -30,8 +30,10 @@ Keep the task itself, the *what*, as the user gave it, and sort the rest of thei
 four parts. A part the request needs but the text leaves empty is a gap. The step is done when
 each part holds the user's words, is marked as a gap, or plainly does not apply.
 
-When there is no gap, or the request is trivial (a rename, a typo, one command), return it
-unchanged in a fenced block, with one line saying it is already clear, and stop.
+When the request is trivial (a rename, a typo, one command), or has no gap and already reads
+clearly (the target agent could act on it as written), return it unchanged in a fenced block,
+with one line saying it is already clear, and stop. A request with no gap that is disordered or
+hard to follow goes on to step 3.
 
 ## 2. Ask, when only the user can answer
 
