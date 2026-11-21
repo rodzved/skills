@@ -54,8 +54,9 @@ Run it in a separate session from the one that will do the work.
 | Copied skill folder | `/mold <rough idea>` |
 
 Without an idea, it asks you to paste one. A command inside the idea, such as `/delegate`, stays
-text in the prompt and is never run. To add a note on how to rewrite, wrap the idea in quotes or
-a code fence and put the note after it. The answer is the prompt alone, in one fenced block,
+text in the prompt and is never run. To add a note, wrap the idea in quotes or a code fence and
+put the note after it: instructions on how to rewrite are followed and left out of the prompt,
+facts about the idea go into it. The answer is the prompt alone, in one fenced block,
 in your own voice: plain sentences that lead with the problem and end with what is open, with no
 headings or lists. Anything it had to assume is written into the prompt as an open point.
 
@@ -67,7 +68,7 @@ The suite lives in [`evals/`](evals/), one folder per case.
 |---|---|
 | `hidden-design-choice` | A design choice found during planning comes back from a Fable planner as a question. |
 | `mold-bare-request` | A bare "do X" with no why gets at most three questions, not the work itself. |
-| `mold-quoted-skill` | A quoted idea that opens with `/rodzved-skills:delegate` is rewritten, not run, and the note after the quotes stays out of the prompt. |
+| `mold-quoted-skill` | A quoted idea that opens with `/rodzved-skills:delegate` is rewritten, not run; the note after the quotes has its instruction left out of the prompt and its fact carried in. |
 | `mold-rambling-request` | A rambling request that holds all four parts comes back rewritten as one fenced prompt, details kept and none added. |
 | `mold-trivial-request` | A trivial rename comes back unchanged in a fenced block with a one-line note. |
 | `no-tool-question` | A question answerable without tools stays in the main session. |

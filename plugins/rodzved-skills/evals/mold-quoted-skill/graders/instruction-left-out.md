@@ -1,7 +1,7 @@
 ---
 type: regex
 target: last_message
-pattern: 'two sentences|teammate|hates long'
+pattern: 'smooth out|rambling'
 flags: i
 match: not_contains
 ---
