@@ -43,15 +43,13 @@ short; then end your turn. With nothing to ask, go straight to step 3.
 ## 3. Write the prompt
 
 Write in the user's voice: first person, their terms, their register. Keep every detail they
-gave; add none of your own. Each gap they left unfilled becomes an explicit open point, for
-example "I haven't decided how this should look: propose two or three options before building."
+gave; add none of your own. Each gap they left unfilled, and anything you had to assume, becomes
+an explicit open point, for example "I haven't decided how this should look: propose two or
+three options before building."
 
 Open with the task, then the four parts, in prose or short labelled lines, whichever reads closer
 to how the user writes. Leave out a part that does not apply.
 
 ## 4. Hand it back
 
-- The prompt, in a single fenced block.
-- Copy it to the clipboard when the environment has a clipboard command (`pbcopy`, `wl-copy`,
-  `xclip`, `clip.exe` or similar), and say so in one line.
-- One line listing anything you assumed, or "Assumed: nothing."
+Reply with the prompt in a single fenced block, and nothing else.

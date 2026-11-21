@@ -53,9 +53,8 @@ Run it in a separate session from the one that will do the work.
 | Plugin | `/rodzved-skills:mold <rough idea>` |
 | Copied skill folder | `/mold <rough idea>` |
 
-Without an idea, it asks you to paste one. The answer is the prompt in one fenced block, in your
-own voice, copied to the clipboard when a clipboard command is available, then one line listing
-anything it assumed.
+Without an idea, it asks you to paste one. The answer is the prompt alone, in one fenced block,
+in your own voice. Anything it had to assume is written into the prompt as an open point.
 
 ## Evals
 
