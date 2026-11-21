@@ -43,9 +43,8 @@ Copy the inner `plugins/<plugin>/skills/<skill>` folder, which holds the `SKILL.
 ## Evals
 
 Each plugin ships its eval suite next to its skills (`plugins/<plugin>/evals/`). The suites make
-real model calls: about $6 for the `rodzved-skills` delegate cases by the eval's estimate at API
-list prices (its mold cases are not costed yet), counted against your plan's usage limits on a
-Claude subscription or billed with an API key. They need `bubblewrap` and `socat` on Linux, and are not run in CI. See the
+real model calls, counted against your plan's usage limits on a Claude subscription or billed
+with an API key. They need `bubblewrap` and `socat` on Linux, and are not run in CI. See the
 [rodzved-skills README](plugins/rodzved-skills/README.md#evals) for how to run them.
 
 ## Forks and issues

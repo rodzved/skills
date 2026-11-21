@@ -79,9 +79,9 @@ bash plugins/rodzved-skills/eval.sh                                  # the whole
 bash plugins/rodzved-skills/eval.sh --case 'no-tool-question' --runs 1  # one case, one run
 ```
 
-- **Cost:** the delegate cases are about $6 a run by the eval's estimate at API list prices; the
-  mold cases are not costed yet. On a Claude subscription a run counts against your plan's usage
-  limits and is not charged in dollars; with an API key it is billed. The script's `--max-cost-usd 10` caps that estimate, not plan usage.
+- **Cost:** a run makes real model calls. On a Claude subscription it counts against your plan's
+  usage limits and is not charged in dollars; with an API key it is billed. The script's
+  `--max-cost-usd 10` caps the eval's estimate at API list prices, not plan usage.
 - **Requirements:** Claude Code 2.1.269 or later, git 2.31 or later, [`uv`](https://docs.astral.sh/uv/)
   (one fixture's tests run through it), `bubblewrap` and `socat` on Linux. On Windows, run it in
   WSL2: native Windows has no sandbox backend.
