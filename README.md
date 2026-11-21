@@ -8,6 +8,7 @@ plugins. Each skill can also be used as a plain skill folder.
 | Skill | Plugin | What it does |
 |---|---|---|
 | [`delegate`](plugins/rodzved-skills/README.md#delegate) | `rodzved-skills` | Session mode that keeps the main session's context small by sending search, planning and execution to subagents. |
+| [`mold`](plugins/rodzved-skills/README.md#mold) | `rodzved-skills` | Rewrites a rough request into a prompt for a coding agent: the why, the done-state, what is settled and what is open. |
 
 ## Install
 

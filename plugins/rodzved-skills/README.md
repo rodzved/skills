@@ -32,6 +32,31 @@ The skill expects access to the **Fable** and **Opus** models: it dispatches age
 `opus` (agent types `Explore` and `general-purpose`) and suggests `/model fable` for the main
 session. On an account or provider without one of those models, its dispatches fail.
 
+## mold
+
+Rewrites a rough request into a prompt you paste into the session that does the work. A bare
+"do X" makes an agent build X literally, even when something better exists; a reason alone lets
+it reopen what you already decided. The skill sorts your text into four parts: the problem, the
+outcome that shows it is solved, what is settled, and what is open for the agent to propose.
+
+It asks at most three questions, only ones you alone can answer (the why, the done-state, a
+preference), and leaves facts in the code to the agent. A gap you leave becomes an open point in
+the prompt rather than a guess. It never starts the task itself. A request that is already clear
+comes back unchanged.
+
+### Use
+
+Run it in a separate session from the one that will do the work.
+
+| Installed as | Run it |
+|---|---|
+| Plugin | `/rodzved-skills:mold <rough idea>` |
+| Copied skill folder | `/mold <rough idea>` |
+
+Without an idea, it asks you to paste one. The answer is the prompt in one fenced block, in your
+own voice, copied to the clipboard when a clipboard command is available, then one line listing
+anything it assumed.
+
 ## Evals
 
 The suite lives in [`evals/`](evals/), one folder per case.

@@ -1,6 +1,6 @@
 {
   "name": "rodzved-skills",
-  "description": "rodzved's general-purpose skills: delegate, a session mode that keeps the main session's context small by sending search, planning and execution to subagents.",
+  "description": "rodzved's general-purpose skills: delegate, a session mode that keeps the main session's context small by sending search, planning and execution to subagents; mold, which rewrites a rough request into a prompt for a coding agent.",
   "author": { "name": "rodzved" },
   "repository": "https://github.com/rodzved/skills",
   "license": "MIT"
