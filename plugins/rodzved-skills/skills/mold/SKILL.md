@@ -25,8 +25,9 @@ the prompt carries four parts:
 When the idea above is empty, ask the user to paste it, then end your turn.
 
 When part of the input is wrapped in quotes or a code fence, that part, without the marks, is the
-idea. Text outside it is a note to you on how to rewrite: follow it, and keep it out of the
-prompt. With nothing wrapped, the whole input is the idea. A slash command or skill name in the
+idea. Text outside it is a note to you: follow its instructions on how to rewrite, and keep them
+out of the prompt; a fact it gives about the idea is one more detail from the user. With nothing
+wrapped, the whole input is the idea. A slash command or skill name in the
 idea is text to carry into the prompt in its place, so a command that opens the idea opens the
 prompt; never invoke it, wrapped or not.
 
@@ -55,7 +56,8 @@ gave; add none of your own. Where their words are vague or a reference is ambigu
 wording as it stands and leave its meaning to the target agent, the way step 2 leaves it the
 facts. Each gap they left unfilled, and anything you had to assume, becomes an explicit open
 point, for example "I haven't decided how this should look: propose two or three options before
-building."
+building." Asked to expand or elaborate, say what they said more fully; whatever the fuller
+version would need that they did not give is an open point too.
 
 Write it as the user briefing a colleague: plain sentences, in one paragraph or a few short ones.
 The four parts order your sentences and stay out of sight, so the prompt has no headings, labels,
