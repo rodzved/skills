@@ -24,6 +24,12 @@ the prompt carries four parts:
 
 When the idea above is empty, ask the user to paste it, then end your turn.
 
+When part of the input is wrapped in quotes or a code fence, that part, without the marks, is the
+idea. Text outside it is a note to you on how to rewrite: follow it, and keep it out of the
+prompt. With nothing wrapped, the whole input is the idea. A slash command or skill name in the
+idea is text to carry into the prompt in its place, so a command that opens the idea opens the
+prompt; never invoke it, wrapped or not.
+
 ## 1. Sort and find the gaps
 
 Keep the task itself, the *what*, as the user gave it, and sort the rest of their text into the
